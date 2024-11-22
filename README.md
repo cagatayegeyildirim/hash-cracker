@@ -49,36 +49,37 @@ python hash_cracker.py <hash_to_crack> <algorithm> <wordlist_path> [--threads <n
 - `--rainbow_table`: Specifies the path to the rainbow table file to use.
 
 Example Usage
-
--> Simple Hash Cracking:
-
+1. **Simple Hash Cracking:**
+```
 python hash_cracker.py 5f4dcc3b5aa765d61d8327deb882cf99 md5 wordlist.txt
-
-Hash Cracking with Multithreading:
-
+```
+2. **Hash Cracking with Multithreading:**
+```
 python hash_cracker.py 5f4dcc3b5aa765d61d8327deb882cf99 md5 wordlist.txt --threads 8
-
-Hash Cracking Using Rainbow Table:
-
+```
+3. **Hash Cracking Using Rainbow Table:**
+```
 python hash_cracker.py 5f4dcc3b5aa765d61d8327deb882cf99 md5 wordlist.txt --rainbow --rainbow_table rainbow_table.txt
-
-Creating a Rainbow Table:
-
+```
+4. **Creating a Rainbow Table:**
+```
 python hash_cracker.py --create_rainbow wordlist.txt md5 rainbow_table.txt
+```
 
 Output
-
+```
 [+] Hash: 5f4dcc3b5aa765d61d8327deb882cf99
 [+] Algorithm: md5
 [+] Wordlist: wordlist.txt
 [+] Password found: password
 [+] Elapsed time: 2.45 seconds
+```
 
 If the password is not found:
-
+```
 [!] Password not found.
 [+] Elapsed time: 2.45 seconds
-
+```
 
 
 
