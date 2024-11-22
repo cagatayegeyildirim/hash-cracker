@@ -1,7 +1,8 @@
-What is a Hash?
+# What is a Hash?
+
 A hash is a transformation of a data set (such as a file or password) into a fixed-length output. This transformation is one-way, meaning it is generally not possible to reverse the hash to retrieve the original data. Hash functions are typically used to verify data integrity, perform encryption, or index data.
 
-Where is it Used?
+# Where is it Used?
 
 Encryption: Hash functions are used to securely store passwords. For example, passwords are usually stored in databases as hashed values.
 
@@ -9,11 +10,11 @@ Data Verification: Used to check the integrity of files or data blocks (e.g., to
 
 Data Structures: Used in data structures like hash tables and hash sets for searching and storing data.
 
-What Does a Hash Cracker Do?
+# What Does a Hash Cracker Do?
 
 A Hash Cracker is a tool designed to find the original data (usually a password) from a hash value. It uses various methods (such as brute force, dictionary attacks, rainbow tables) to reverse-engineer the hash and recover the original data. These tools are commonly used for security research or identifying weak passwords.
 
-Features
+# Features
 
 Hash Cracking: Solve popular hash algorithms such as MD5, SHA256, bcrypt, argon2.
 
@@ -23,7 +24,7 @@ Rainbow Table Support: Quickly crack hashes using rainbow tables.
 
 Rainbow Table Creation: Create and use your own rainbow tables.
 
-Requirements
+# Requirements
 
 •	Python 3.x
 
@@ -31,11 +32,11 @@ Requirements
 
 •	argon2 (pip install argon2-cffi)
 
-Installation
+# Installation
 
   -> pip install -r requirements.txt
 
-Usage
+# Usage
 
 ```
 python hash_cracker.py <hash_to_crack> <algorithm> <wordlist_path> [--threads <num_threads>] [--rainbow] [--create_rainbow]
@@ -48,7 +49,8 @@ python hash_cracker.py <hash_to_crack> <algorithm> <wordlist_path> [--threads <n
 - `--create_rainbow`: Creates a rainbow table from the given wordlist file.
 - `--rainbow_table`: Specifies the path to the rainbow table file to use.
 
-Example Usage
+# Example Usage
+
 1. **Simple Hash Cracking:**
 ```
 python hash_cracker.py 5f4dcc3b5aa765d61d8327deb882cf99 md5 wordlist.txt
@@ -66,7 +68,8 @@ python hash_cracker.py 5f4dcc3b5aa765d61d8327deb882cf99 md5 wordlist.txt --rainb
 python hash_cracker.py --create_rainbow wordlist.txt md5 rainbow_table.txt
 ```
 
-Output
+# Output
+
 ```
 [+] Hash: 5f4dcc3b5aa765d61d8327deb882cf99
 [+] Algorithm: md5
