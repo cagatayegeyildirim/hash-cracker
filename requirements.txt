@@ -1,3 +1,2 @@
-flash
 argon2-cffi
 bcrypt
